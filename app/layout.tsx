@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Navbar from "./components/shared/Navbar";
+import Footer from "./components/shared/Footer";
+import { outfit, jetbrainsMono } from "./font";
 import "./globals.css";
 
 
@@ -74,9 +77,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <body className={`${outfit.variable} ${jetbrainsMono.variable}`}
       >
-        {children}
+      
+        <main className="min-h-screen">
+          <Navbar />
+          {children}
+          <Footer/>
+          
+    </main>  
       </body>
     </html>
   );
