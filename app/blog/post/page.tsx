@@ -2,18 +2,28 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import  Link from 'next/link';
+import Link from 'next/link';
 import { ArrowLeft, Clock, Calendar, Tag, Share2, BookmarkPlus, ThumbsUp } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "../../components/ui/avatar";
 import { Button } from '../../components/ui/button';
 import { blogPosts } from '@/data/blogPosts';
 
+type Post =  {
+    id: number;
+    title: string;
+    excerpt: string;
+    date: string;
+    readTime: string;
+    category: string;
+    slug: string;
+    tags: string[];
+  }
 
 const BlogPost = () => {
     const searchParams = useSearchParams();
     const slug = searchParams.get('slug');
 
-    const [post, setPost] = useState<any>(null);
+    const [post, setPost] = useState<Post | null | undefined >(null);
 
     useEffect(() => {
         // In a real app, this would fetch from an API

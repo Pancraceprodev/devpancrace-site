@@ -1,5 +1,5 @@
 
-import { ArrowRight, Rocket, Check, Smartphone, Brain, FileText } from 'lucide-react';
+import { ArrowRight, Check, Smartphone, Brain, FileText } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 

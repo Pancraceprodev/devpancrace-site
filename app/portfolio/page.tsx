@@ -1,11 +1,11 @@
 'use client'
-import { useState } from 'react';
+import Image from 'next/image';
 import { Code, Database, Server, Layout, ExternalLink, Github, Play, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 
 const Portfolio = () => {
-    const [activeTab, setActiveTab] = useState('startup');
+    //const [activeTab, setActiveTab] = useState('startup');
 
     const technologies = [
         { name: "React.js", color: "bg-blue-500" },
@@ -75,7 +75,7 @@ const Portfolio = () => {
             {/* Projects Filter */}
             <section className="py-12 px-4 sm:px-8 md:px-16 lg:px-24 bg-white">
                 <div className="container mx-auto">
-                    <Tabs defaultValue="startup" className="w-full" onValueChange={setActiveTab}>
+                    <Tabs defaultValue="startup" className="w-full">
                         <div className="flex justify-center mb-8">
                             <TabsList className="bg-gray-100 p-1">
                                 <TabsTrigger value="startup" className="data-[state=active]:bg-white data-[state=active]:text-brand-primary">
@@ -296,7 +296,7 @@ const Portfolio = () => {
                                         <div className="aspect-[16/9] bg-gray-100">
                                             {/* Project image placeholder */}
                                             <div className="w-full h-full flex-center">
-                                                <img src={project.image} alt={project.title} className="w-12 h-12 opacity-50" />
+                                                <Image src={project.image} alt={project.title} className="w-12 h-12 opacity-50" />
                                             </div>
                                         </div>
                                         <div className="p-6">
