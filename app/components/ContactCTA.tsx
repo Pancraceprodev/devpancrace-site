@@ -1,5 +1,5 @@
 
-import { ArrowRight, Mail, MessageSquare } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link'
 

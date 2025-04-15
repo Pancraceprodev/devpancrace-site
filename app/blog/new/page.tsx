@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, Image, Link as LinkIcon, Bold, Italic, List, ListOrdered, Quote, Code } from 'lucide-react';
+import { ArrowLeft, Image as ImageIcon, Link as LinkIcon, Bold, Italic, List, ListOrdered, Quote, Code } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { Label } from '../../components/ui/label';
@@ -110,7 +110,7 @@ const NewBlogPost = () => {
               <div className="space-y-2">
                 <Label>Image principale</Label>
                 <div className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-brand-primary transition-colors">
-                  <Image size={32} className="mx-auto mb-2 text-gray-400" />
+                   <ImageIcon  size={32} className="mx-auto mb-2 text-gray-400" />
                   <p className="text-brand-muted">Cliquez pour télécharger une image</p>
                   <p className="text-xs text-gray-400">PNG, JPG, GIF jusqu'à 5MB</p>
                 </div>
@@ -141,7 +141,7 @@ const NewBlogPost = () => {
                     <Code size={18} />
                   </Button>
                   <Button type="button" variant="ghost" size="icon">
-                    <Image size={18} />
+                    <ImageIcon size={18} />
                   </Button>
                 </div>
                 

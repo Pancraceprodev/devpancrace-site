@@ -7,9 +7,20 @@ import { Avatar, AvatarFallback, AvatarImage } from "../../components/ui/avatar"
 import { Button } from '../../components/ui/button';
 import { blogPosts } from '@/data/blogPosts';
 
+type Post = {
+    id: number;
+    title: string;
+    excerpt: string;
+    date: string;
+    readTime: string;
+    category: string;
+    slug: string;
+    tags: string[];
+  }
+
 const BlogPost = () => {
     const searchParams = useSearchParams();
-    const [post, setPost] = useState<any>(null);
+    const [post, setPost] = useState<Post| undefined | null>(null);
     const slug = searchParams.get('slug') || '13-0';
     
 
